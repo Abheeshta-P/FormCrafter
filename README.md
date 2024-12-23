@@ -23,7 +23,7 @@ To run this project locally, ensure you have the following installed:
 - **npm** (or **yarn**)
 - A modern browser (e.g., Chrome, Firefox)
 
-### Installing 📝
+### Installing 
 
 1. Clone the repository:
 
@@ -44,7 +44,7 @@ To run this project locally, ensure you have the following installed:
    yarn install
    ```
 
-### Running the App 🏃‍♂️
+### Running the App 
 
 1. Start the development server:
 
@@ -72,7 +72,7 @@ To run this project locally, ensure you have the following installed:
 └── /App.js            # Main component that sets up routes and layout
 ```
 
-### Key Files 🔑
+### Key Files 📃
 
 - **App.jsx**: Sets up routing and main layout (includes the header, footer, and page content).
 - **authSlice.js**: Redux slice that handles authentication (login/logout).
@@ -84,7 +84,7 @@ To run this project locally, ensure you have the following installed:
 - **FormsListPage.jsx**: Allows the user to view list of their previously created forms.
 - **ViewFormPage.jsx**: Allows the user to view and use their previously created form.
 
-## API Integration (Future Scope, Frontend is done) 🔌
+## API Integration (Future Scope, Frontend is done) 
 
 ### Authentication 🔐
 
@@ -96,12 +96,12 @@ To run this project locally, ensure you have the following installed:
 - **Create Form**: Users can create a form by providing form details, which will be stored in the local storage (since it is frontend focused for now).
 - **View Forms**: Users can view a list of forms they’ve created and use those forms.
 
-## Technologies Used 🧑‍💻
+## Technologies Used👩🏻‍💻
 
 - **React** ⚛️: A JavaScript library for building user interfaces.
-- **React Router** 🚦: For routing and navigation between pages.
-- **Redux Toolkit** 🔧: For managing global state (e.g., authentication state).
-- **React Hook Form** 📋: For handling form validation and submission.
+- **React Router** : For routing and navigation between pages.
+- **Redux Toolkit** : For managing global state (e.g., authentication state).
+- **React Hook Form** : For handling form validation and submission.
 - **Tailwind CSS** 🎨: For utility-first styling.
 
 > Under development
