@@ -4,7 +4,7 @@ import { Container, Button, Card } from '../components';
 import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
-  const user = useSelector((state) => state.authSliceReducer.userData);
+  const user = useSelector((state) => state.auth.userData?.email);
   const navigate = useNavigate();
 
   return (

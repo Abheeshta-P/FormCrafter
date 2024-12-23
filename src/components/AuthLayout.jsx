@@ -6,7 +6,7 @@ function Protected({
   children,
 }) {
   const authorized = true;
-  const storeAuthStatus = useSelector(state => state.authSliceReducer.status);
+  const storeAuthStatus = useSelector(state => state.auth.status);
   const navigate  = useNavigate();
   const [loader,setLoader] = useState(true);
   useEffect(()=>{

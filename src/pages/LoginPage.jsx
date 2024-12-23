@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate, Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login as storeLogin } from '../features/authSlice.js';
+import { initializeForms } from '../features/formsSlice.js';
 import { Input, Button } from '../components/index.js';
 
 function LoginPage() {
@@ -10,16 +11,21 @@ function LoginPage() {
   const [error, setError] = useState('');
   const dispatch = useDispatch();
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const isLoggedIn = useSelector(state => state.auth.status);
+
+  useEffect(()=>{
+    if(isLoggedIn) navigate('/dashboard')
+  },[])
 
   const login = async (data) => {
     setError('');
-    console.log(data)
     if (data.email == '' || data.password == '') {
       return;
     }
     try {
       // backend call is done
-      dispatch(storeLogin({ status: true, userData: data.email }))
+      dispatch(storeLogin({ status: true, userData: { email : data.email } }))
+      dispatch(initializeForms({ email : data.email }))
       navigate('/dashboard');
     } catch (error) {
       console.log("login form :: login :: error", error);

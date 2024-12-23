@@ -5,6 +5,7 @@ import Header from "./Header.jsx";
 import Footer from './Footer.jsx';
 import Container from "./Container.jsx";
 import Button from './Button.jsx';
-import Card from './Card.jsx'
+import Card from './Card.jsx';
+import Select from './Select.jsx';
 
-export { Input,AuthLayout,LogoutBtn,Header,Footer,Container,Button,Card };
+export { Input,AuthLayout,LogoutBtn,Header,Footer,Container,Button,Card,Select };
