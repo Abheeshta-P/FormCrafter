@@ -173,7 +173,7 @@ function CreateFormPage() {
         <Input label='Form Name *' placeholder='Enter form name' value = {formName}   onChange={handleFormNameChange} classNameInput='focus:outline-zinc-900'/>
       </div>
 
-      {/* Form Preview of added fields with its label type and name*/}
+      {/* Form Preview of added fields with its label, type, name and options if applicable */}
       <div className="w-full max-w-2xl border p-6 rounded-lg bg-white mb-6">
         {fields.length === 0 ? (
           <p className="text-zinc-500">No fields yet</p>
@@ -207,7 +207,7 @@ function CreateFormPage() {
             <Input label="Label" placeholder="Field Label" value={newField.label} onChange={(e) => handleChange('label', e.target.value)} classNameInput="focus:outline-zinc-900" required/>
             <Input label="Name (key)" placeholder="Unique Name" value={newField.name} onChange={(e) => handleChange('name', e.target.value)} classNameInput="focus:outline-zinc-900" required/>
             </div>
-            <Input type='checkbox' label='Required' checked={newField.required} className='w-fit flex gap-2 justify-center items-center' classNameInput='inline w-5' classNameLabel='mb-0' onChange={(e) => handleChange('required', e.target.checked)} required/>
+            <Input type='checkbox' label='Required' checked={newField.required} className='w-fit flex gap-2' classNameInput='inline w-5' classNameLabel='mb-0' onChange={(e) => handleChange('required', e.target.checked)} required/>
 
           {/* If the type of input is text then additional fields like min and max length is needed */}
           {newField.type === 'text' && (
@@ -235,7 +235,7 @@ function CreateFormPage() {
         {/* Add the field to the Form */}
         <Button onClick={handleAddField}> Add Field </Button>
       </div>
-          <Button onClick={handleFormCreation} className='mt-12 bg-green-700'>Finalize form</Button>
+          <Button onClick={handleFormCreation} className='mt-12' bgColor='bg-green-700'>Finalize form</Button>
       <button onClick={scrollTo} className="fixed bottom-5 right-5 bg-zinc-800 text-white px-2 py-1 text-sm font-semibold rounded-full shadow-lg scroller">Goto {stickyScrollerValue}</button>
     </div>
   );

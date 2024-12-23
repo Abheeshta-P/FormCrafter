@@ -19,7 +19,7 @@ function Header() {
         <ul className='flex space-x-4 justify-center items-center'>
           {navItems.map(navItem => navItem.active && (
             <li key={navItem.name}>
-              <button className='font-semibold text-nowrap text-sm text-zinc-800 transition duration-200 ease-in-out sm:text-base' onClick={() => navigate(navItem.slug)}>{navItem.name}</button>
+              <button className='font-semibold text-nowrap text-base lg:text-lg text-zinc-800 transition duration-200 ease-in-out' onClick={() => navigate(navItem.slug)}>{navItem.name}</button>
             </li>
           ))}
           {authStatus && <li><LogoutBtn /></li>}
