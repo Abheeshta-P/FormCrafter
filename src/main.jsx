@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { LoginPage, Dashboard, FormListPage, CreateFormPage, ViewFormPage } from './pages/pages.js';
+import { LoginPage, Dashboard, FormsListPage, CreateFormPage, ViewFormPage } from './pages/pages.js';
 import { AuthLayout } from './components/index.js'
 import store from "./store/store";
 
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         path: '/forms',
         element: (
           <AuthLayout>
-            <FormListPage />
+            <FormsListPage />
           </AuthLayout>
         ),
       },
