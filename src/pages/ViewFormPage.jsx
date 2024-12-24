@@ -15,8 +15,8 @@ function ViewFormPage() {
     console.log(JSON.stringify(data, null, 2));
     Swal.fire(
               'Submitted!',
-              'Your form has been submitted.',
-              'Success!, Check the console.'
+              'Your form has been submitted. Check console!',
+              'success'
     ).then(()=>{
       reset();
     })
