@@ -7,5 +7,7 @@ import Container from "./Container.jsx";
 import Button from './Button.jsx';
 import Card from './Card.jsx';
 import Select from './Select.jsx';
+import CheckboxGroup from "./CheckboxGroup.jsx";
+import RadioGroup from "./RadioGroup.jsx";
 
-export { Input,AuthLayout,LogoutBtn,Header,Footer,Container,Button,Card,Select };
+export { Input,AuthLayout,LogoutBtn,Header,Footer,Container,Button,Card,Select,CheckboxGroup,RadioGroup };

@@ -12,7 +12,7 @@ function FormsListPage() {
   };
 
   return (
-    <Container className={'mt-5 sm:mt-12 flex flex-col items-center'}>
+    <Container className={'mt-8 sm:mt-12 flex flex-col items-center'}>
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-zinc-900 mb-12">Your Forms</h1>
       
       {userForms.length > 0 ? (
