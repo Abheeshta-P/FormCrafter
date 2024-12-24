@@ -76,7 +76,7 @@ function CreateFormPage() {
       confirmButtonText: 'Yes, finalize it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        // Add the form to backend or state
+        // Add the form to backend ( here local storage ) or state
         dispatch(addForm({formName,fields}));
 
         // Clear temporary form data from local storage
@@ -174,6 +174,10 @@ function CreateFormPage() {
       </div>
 
       {/* Form Preview of added fields with its label, type, name and options if applicable */}
+
+      {/* Currently, only the delete option is implemented. 
+      TODO: Add functionality for editing and dragging fields .*/}
+
       <div className="w-full max-w-2xl border p-6 rounded-lg bg-white mb-6">
         {fields.length === 0 ? (
           <p className="text-zinc-500">No fields yet</p>
@@ -199,6 +203,9 @@ function CreateFormPage() {
       </div>
 
       {/* Field Builder Section */}
+
+      {/* TODO: Implement functionality to add nested inputs when creating a form. */}
+      
       <div className="w-full max-w-2xl border p-6 rounded-lg bg-white shadow-md flex flex-col gap-5 border-black/20">
         <h2 className="text-lg md:text-xl font-semibold">Add New Field</h2>
         <form className="flex flex-col gap-4">
@@ -235,7 +242,7 @@ function CreateFormPage() {
         {/* Add the field to the Form */}
         <Button onClick={handleAddField}> Add Field </Button>
       </div>
-          <Button onClick={handleFormCreation} className='mt-12' bgColor='bg-green-700'>Finalize form</Button>
+      <Button onClick={handleFormCreation} className='mt-12' bgColor='bg-green-700'>Finalize form</Button>
       <button onClick={scrollTo} className="fixed bottom-5 right-5 bg-zinc-800 text-white px-2 py-1 text-sm font-semibold rounded-full shadow-lg scroller">Goto {stickyScrollerValue}</button>
     </div>
   );

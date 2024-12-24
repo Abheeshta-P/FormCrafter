@@ -10,6 +10,7 @@ function Dashboard() {
   return (
     <Container className={'-mt-12 sm:mt-0'}>
       <div className="flex flex-col items-center justify-center mt-28">
+        {/* A better approach may be to use username ( if any ) instead of email */}
         <h1 className="text-4xl sm:text-5xl font-bold text-center text-zinc-900">Welcome Back{user ? `, ${user}` : ''}!</h1>
         <p className="mt-3 text-lg sm:text-xl text-center text-zinc-500">Here's what you can do today</p>
 
@@ -27,12 +28,16 @@ function Dashboard() {
           {/* View Existing Forms Card */}
           <Card>
             <h2 className="text-xl sm:text-2xl font-semibold text-zinc-800">View Existing Forms</h2>
-            <p className="text-zinc-500 mt-2">Manage and review your previously created forms.</p>
+            <p className="text-zinc-500 mt-2">Review and use your previously created forms.</p>
             <Button className="mt-4 w-full" onClick={() => navigate('/forms')}>
               View Forms
             </Button>
           </Card>
         </div>
+
+        {/* TODO1: Implement form usage analysis after backend support for sending form to other users.
+        TODO2: Add a page to view form responses once backend implementation is complete. */}
+
       </div>
     </Container>
   );

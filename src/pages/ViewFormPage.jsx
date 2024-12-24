@@ -22,8 +22,10 @@ function ViewFormPage() {
     })
   };
 
-  if (!form) return <p className="text-center">Form not found</p>;
+  // TODO: Improve the design by adding a custom 404 page or similar for better user experience.
+  if (!form) return <p className="text-xl sm:text-2xl font-semibold text-zinc-800">Form not found</p>;
 
+  // TODO: Add an option to share the form on the view form page (once backend unique URL is implemented).
   return (
     <div className="max-w-3xl mx-auto p-6 border border-black/10 min-h-[50vh] rounded-lg  bg-white">
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-zinc-900 mb-12">{form.formName}</h1>
