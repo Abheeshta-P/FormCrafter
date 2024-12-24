@@ -1,7 +1,7 @@
 import React from 'react'
-import { logout } from '../features/authSlice'
+import { logout } from '../../features/authSlice.js'
 import { useDispatch,useSelector } from 'react-redux'
-import { formCreationUtils } from '../util';
+import { formCreationUtils } from '../../util';
 
 function LogoutBtn() {
   const dispatch = useDispatch();
