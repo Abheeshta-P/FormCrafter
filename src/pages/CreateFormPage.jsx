@@ -101,7 +101,7 @@ function CreateFormPage() {
       return;
     }
   
-    const updatedField = { ...newField, options: options };
+    const updatedField = { ...newField, options: options.filter(option => option !== '') };
   
     setNewField(updatedField);  // Update state with options
 
@@ -133,6 +133,20 @@ function CreateFormPage() {
 
 
   const handleChange = (key, value) => {
+    if (key === 'type') {
+      // Reset the newField object but retain the type
+      setNewField({ type: value, label: '', name: '', required: false, options: [], minLength: '', maxLength: '' });
+      setOptions([]);
+      return;
+    }
+
+    if(key === 'name'){
+      const isFieldNameTaken = fields.some(field => field.name.toLowerCase() === value.toLowerCase());
+      if (isFieldNameTaken) {
+        alert(`This field name "${value}" is already taken. Please choose a different name.`);
+        return;
+      }
+    }
     setNewField({ ...newField, [key]: value });
   };
 
