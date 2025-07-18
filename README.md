@@ -104,4 +104,4 @@ To run this project locally, ensure you have the following installed:
 - **React Hook Form** : For handling form validation and submission.
 - **Tailwind CSS** 🎨: For utility-first styling.
 
-> Under development
+> All rights are reserved &copy; Abheeshta P
